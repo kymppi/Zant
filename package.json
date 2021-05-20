@@ -1,8 +1,11 @@
 {
-  "name": "typescript-bot",
+  "name": "zant",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "main": "dist/index.js",
+  "homepage": "https://github.com/kymppi/Zant#readme",
+  "bugs": {
+    "url": "https://github.com/kymppi/Zant/issues"
+  },
   "scripts": {
     "start": "node dist",
     "watch": "tsc -p tsconfig.json -w",
@@ -26,9 +29,10 @@
     "ts-mockito": "^2.6.1",
     "ts-node": "^9.1.1"
   },
-  "author": {
-    "name": "Midka",
-    "email": "me@midka.dev",
-    "url": "https://github.com/kymppi"
-  }
+  "author": "Midka <me@midka.dev> (https://github.com/kymppi)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kymppi/Zant.git"
+  },
+  "license": "MIT"
 }
