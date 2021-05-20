@@ -3,7 +3,7 @@ import { Bot } from './Bot';
 import container from './inversify.config';
 import { TYPES } from './types';
 
-let bot = container.get<Bot>(TYPES.Bot);
+const bot = container.get<Bot>(TYPES.Bot);
 
 bot
   .listen()
