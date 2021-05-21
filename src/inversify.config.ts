@@ -7,6 +7,9 @@ import { MessageResponder } from './services/message-responder';
 import { PingFinder } from './services/ping-finder';
 import logger from './logger';
 import { PrefixChecker } from './services/prefix-checker';
+import { Loader } from './utils/loaders';
+import { Command } from './interfaces/Command';
+import { Event } from './interfaces/Event';
 
 const container = new Container();
 
@@ -24,6 +27,10 @@ if (!process.env.PREFIX) {
   process.exit(1);
 }
 container.bind<string>(TYPES.Prefix).toConstantValue(process.env.PREFIX);
+
+container.bind<Loader>(TYPES.Loader).to(Loader).inSingletonScope();
+container.bind<Command[]>(TYPES.Commands);
+container.bind<Event[]>(TYPES.Events);
 
 container
   .bind<MessageResponder>(TYPES.MessageResponder)
